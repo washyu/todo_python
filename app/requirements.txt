@@ -10,4 +10,4 @@ pytest==8.0.0
 httpx==0.26.0
 
 # CORS
-fastapi-cors==0.3.0
+fastapi-cors==0.0.6
