@@ -17,7 +17,7 @@ COPY app/ ./app/
 RUN apt-get update && apt-get install -y nodejs npm
 
 # Copy the React application code into the container
-COPY todo-app/ ./todo-app/
+COPY vite_todo_app/ ./vite_todo_app/
 
 # Build the React app
 RUN cd todo-app && npm install && npm run build
@@ -29,7 +29,7 @@ FROM python:3.10-slim
 WORKDIR /workspace
 
 # Copy the built React app from the previous stage
-COPY --from=base /workspace/todo-app/build ./todo-app/build
+COPY --from=base /workspace/vite_todo_app/build ./vite_todo_app/build
 
 # Copy the FastAPI application code from the previous stage
 COPY --from=base /workspace/app ./app
