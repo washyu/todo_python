@@ -4,8 +4,6 @@ uvicorn==0.27.1
 sqlalchemy==2.0.27
 pydantic==2.6.1
 
-# Database
-sqlite3
 
 # Testing
 pytest==8.0.0
