@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y nodejs npm
 COPY vite_todo_app/ ./vite_todo_app/
 
 # Build the React app
-RUN cd todo-app && npm install && npm run build
+RUN cd vite_todo_app && npm install && npm run build
 
 # Use a multi-stage build to keep the final image small
 FROM python:3.10-slim
